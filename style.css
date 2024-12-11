@@ -26,34 +26,68 @@ h2 {
     font-size: 2.5em;
     color: #7b68b1;
 }
+
+p {
+    font-size: 18px;
+}
+
+/* Portfolio grid layout */
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     padding: 40px;
+    justify-items: center;
 }
 
+/* Projects within the grid */
 .project-card {
     background-color: #fff;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 25em;
 }
 
 .project-card:hover {
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
-.app-icon {
-    width: 80px;
-    height: 80px;
+/* Container for a project's image */
+.project-icon-container #cat-breath-icon {
+    background-color: #598372; 
     border-radius: 20px;
-    margin-bottom: 15px;
+    cursor: pointer;
 }
 
+/* Project's image */
+.project-icon {
+    width: 100%;
+    height: 20em;
+    border-radius: 20px;
+}
+
+/* Apple's App Store image */
 .app-store-badge img {
-    height: 40px;
-    margin-top: 15px;
+    height: 150px;
+}
+
+/* Link element within each project */
+.project-button {
+    display: inline-block; 
+    padding: 10px 20px; 
+    color: white; 
+    background-color: black; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    margin: 20px;
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+.project-button:hover {
+    background-color: #333;
 }
 
 footer {
@@ -63,7 +97,8 @@ footer {
     color: #fff;
 }
 
-/* Background Geometric Shapes */
+
+/* Background geometric shapes */
 body {
     position: relative;
     background-color: #f4f4f4;
@@ -97,4 +132,35 @@ body::after {
 .portfolio-grid {
     position: relative;
     z-index: 1;
+}
+
+
+/* Responsive design */
+@media only screen and (max-width: 600px) {
+
+    .header {
+        padding-bottom: 0px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    h1 {
+        left: 0px;
+        position: relative;
+    }
+
+    .header {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .project-icon {
+        width: 80%; 
+        height: auto; 
+    }
 }
